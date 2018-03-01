@@ -8,7 +8,12 @@ variable "security_group_id" {
 }
 
 variable "allowed_inbound_cidr_blocks" {
-  description = "A list of CIDR-formatted IP address ranges from which the EC2 Instances will allow connections to Consul"
+  description = "A list of CIDR-formatted IPv4 address ranges from which the EC2 Instances will allow connections to Consul"
+  type        = "list"
+}
+
+variable "allowed_inbound_ipv6_cidr_blocks" {
+  description = "A list of CIDR-formatted IPv6 address ranges from which the EC2 Instances will allow connections to Consul"
   type        = "list"
 }
 
